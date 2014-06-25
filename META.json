@@ -1,5 +1,5 @@
 {
-   "abstract" : "It's new $module",
+   "abstract" : "data section as a fixture",
    "author" : [
       "Yuuki Furuyama <addsict@gmail.com>"
    ],
@@ -57,6 +57,17 @@
       }
    },
    "release_status" : "unstable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/addsict/Data-Section-Fixture/issues"
+      },
+      "homepage" : "https://github.com/addsict/Data-Section-Fixture",
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/addsict/Data-Section-Fixture.git",
+         "web" : "https://github.com/addsict/Data-Section-Fixture"
+      }
+   },
    "version" : "0.01",
    "x_authority" : "cpan:ADDSICT"
 }
