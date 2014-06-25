@@ -49,7 +49,7 @@ Data::Section::Fixture - data section as a fixture
     my $dbh = DBI->connect(...);
 
     with_fixture($dbh, sub {
-        # fixture data is available inside this scope.
+        # fixture data is only accessible inside this scope.
         my $rows = $dbh->selectall_arrayref('SELECT id FROM t ORDER BY id');
         is_deeply $rows, [[1], [2], [3]];
     });
@@ -67,17 +67,17 @@ Data::Section::Fixture - data section as a fixture
 
 =head1 DESCRIPTION
 
-Data::Section::Fixture is a module to use C<__DATA__> section as a fixture definition area. 
-This module is intended to be used at unit testing.
+Data::Section::Fixture is a module to use C<__DATA__> section as a fixture data. 
+This module is intended to be used with unit testing.
 
-The mark C<@@ setup> in C<__DATA__> section stands for setup SQL which is executed just before C<with_fixture> to setup fixture data.
+The mark C<@@ setup> in C<__DATA__> section stands for setup SQL which is executed just before C<with_fixture>.
 The SQL below the mark C<@@ teardown> is executed at the end of C<with_fixture> to tear down fixture data.
 
 =head1 FUNCTION
 
 =head2 with_fixture($dbh, $code_ref);
 
-Fixture data can be accessible inside this function.
+Fixture data is only accessible inside this function.
 
 =over
 
