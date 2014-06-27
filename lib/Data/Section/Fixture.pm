@@ -62,7 +62,7 @@ Data::Section::Fixture - data section as a fixture
     INSERT INTO t (id) VALUES (1), (2), (3);
 
     @@ teardown
-    DELETE FROM t;
+    DROP TABLE t;
 
 
 =head1 DESCRIPTION
